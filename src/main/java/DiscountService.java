@@ -1,4 +1,8 @@
+import java.util.logging.Logger;
+
 public class DiscountService {
+
+    private static final Logger log=Logger.getLogger(DiscountService.class.getName());
 
     public String getDiscount(int amount) {
 
@@ -12,6 +16,8 @@ public class DiscountService {
         }else {
             discountPercentage="No Discount";
         }
+
+        log.info("Show us how many percent we have: "+discountPercentage);
 
           //return/output result, Then
         return (String) discountPercentage;
